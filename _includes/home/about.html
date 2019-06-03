@@ -21,55 +21,94 @@
 
     </div>
 </section>
-<div class="container reminder-bar">
- <div class="panel panel-default navbar-fixed-bottom">
-  <div class="panel-heading">
-      <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="event.preventDefault();">
-              <ion-icon name="construct"></ion-icon>
-              {% t 'networkupgrade.reminder' %}: {% t 'networkupgrade.date-2019-05-15' %} {% t 'networkupgrade.title' %}
-          </a>
-      </h4>
-  </div>
-  <div id="collapseOne" class="panel-collapse collapse">
-    <div class="panel-body">
-      <div class='col-sm-12 col-md-6'>
-          <h3>{% t 'networkupgrade.date-2019-05-15' %} {% t 'networkupgrade.title' %}</h3>
-          <p>{% t 'networkupgrade.description' %}</p>
 
-          <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#collapseOne" onclick="event.preventDefault();"><ion-icon name="close"></ion-icon> {% t 'networkupgrade.close' %}</a>
 
+<div class="donation-section2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h3>{% t 'donations.title' %}</h3>
+
+        <p>{% t 'donations.subtitle' %}</p>
+
+        <p><b>{% t 'donations.goal' %}</b></p>
+
+        <p>{% t 'donations.explanation' %}</p>
+
+        <p>{% t 'donations.recipient' %}</p>
       </div>
-        <div class="col-sm-12 col-md-6 text-center reminder-links">
-          <h4>{% t 'networkupgrade.compatible' %}:</h4>
-          <a href="https://download.bitcoinabc.org/0.19.0/" title="Bitcoin ABC 0.19.0" target="_blank">
-              <ion-icon name="link"></ion-icon> Bitcoin ABC 0.19.0
-          </a>
-          <!-- <a href="https://github.com/BitcoinUnlimited/BitcoinUnlimited/blob/dev/doc/release-notes/release-notes-bucash1.5.0.1.md" title="Bitcoin Unlimited Cash Edition 1.5.0.1">
-              <ion-icon name="link"></ion-icon> Bitcoin Unlimited Cash Edition 1.5.0.1
-          </a>
-          <a href="https://github.com/bitcoinxt/bitcoinxt/releases/tag/v0.11K" title="Bitcoin XT Release K">
-              <ion-icon name="link"></ion-icon> Bitcoin XT Release K
-          </a>
-          <a href="https://github.com/bcoin-org/bcash/blob/master/CHANGELOG.md#v110" title="bcoin bcash" target="_blank">
-              <ion-icon name="link"></ion-icon> bcoin - bcash 1.1.0
-          </a> -->
-          <h4>{% t 'networkupgrade.additional' %}:</h4>
-          <a href="https://github.com/bitcoincashorg/bitcoincash.org/blob/master/spec/2019-05-15-upgrade.md" title="Upgrade Specification" target="_blank">
-              <ion-icon name="link"></ion-icon> {% t 'networkupgrade.specification' %}
-          </a>
 
-          <a href="https://github.com/bitcoincashorg/bitcoincash.org/blob/master/workgroups/wg-testing/2019-05-15_upgrade_testnet.md" title="Testnet Information" target="_blank">
-           <ion-icon name="link"></ion-icon> {% t 'networkupgrade.testnet' %}
-          </a>
+      <div class="col-md-5">
+
+        <div class="pop-shadow whitepaper-promo donation-card2 text-center">
+        <div class="thank-you-card" id="thank-you-card-general"></div>
+          <img class="donation-logo-bch pl-2 pr-2 mb-1" src="/img/bch-dev-fund.png" alt="Dev Fund">
+          <div class="donation-line"></div>
+          <div class="goal-percentage">{% t 'donations.percentage' %}</div>
+          <div class="pb-ctn">
+            <div class="pb-bckgrd"></div>
+            <div class="pb" id="goal-bar" color="#fab915"></div>
+          </div>
+          <div class="donation-info">
+          <h4 id="balance">0 BCH</h4>
+          <h5>{% t 'donations.total' %}</h5>
+          <h4 id="transactions">0</h4>
+          <h5>{% t 'donations.total_tx' %}</h5>
+          <h4 id="days-to-go">0</h4>
+          <h5>{% t 'donations.days_left' %}</h5>
+          </div>
+          <div class="donation-line"></div>
+
+          <img class="qr-codes" src="/img/general-address.png" alt="QR Donate">
+          <div class="donation-address" id="general-address">bitcoincash:qq29gww57twmvq07las39p3m65x8nw2ngvvuq6adpn</div>
         </div>
       </div>
+
+
     </div>
   </div>
 </div>
 
+
+
 <section class="space--xxs">
     <div class="container benefits">
+       <!--  <div class="row space--xs">
+                <div class="col-sm-12">
+                    <div class="pop-shadow whitepaper-promo">
+                        <p><ion-icon name="heart" style="background-color:#4D4D4D"></ion-icon></p>
+                        <p><strong>{% t 'headings.donate' %}</strong></p>
+                        <p>{% t 'donate.description' %}</p>
+                        <hr>
+
+                        <div class="donation-card2">
+                          <div class="thank-you-card" id="thank-you-card-general"></div>
+                          <img class="donation-logo-bch" src="/img/bch-dev-fund.png" alt="BCH Dev Fund">
+                          <div class="donation-line"></div>
+                          <div class="goal-percentage">% of goal reached</div>
+                            <div class="pb-ctn">
+                              <div class="pb-bckgrd"></div>
+                              <div class="pb" id="goal-bar" color="#fab915"></div>
+                          </div>
+                          <div class="donation-info">
+                            <h4 id="balance">0 BCH</h4>
+                            <h5>donated of 800 BCH goal</h5>
+                            <h4 id="transactions">0</h4>
+                            <h5>donations made</h5>
+                            <h4 id="days-to-go">0</h4>
+                            <h5>days to go</h5>
+                          </div>
+
+                          <div class="donation-line"></div>
+                          <img class="qr-codes" src="/img/general-address.png" alt="Donation QR">
+                          <div class="donation-address" id="general-address">bitcoincash:qq29gww57twmvq07las39p3m65x8nw2ngvvuq6adpn</div>
+                          <a class="btn-donate-secodary" href="/fundraise/">Donate to a specific project</a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div> -->
         <div class="row space--xs">
             <div class="col-sm-12">
                 <div class="pop-shadow whitepaper-promo">
@@ -80,7 +119,8 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     {% include home/roadmap-cta.html %}
 
@@ -149,9 +189,6 @@
                     </a>
                     <a class="btn btn-default large round" href="http://reddit.com/r/bitcoincash" target="_blank">
                         <ion-icon name="logo-reddit"></ion-icon> /r/bitcoincash
-                    </a>
-                    <a class="btn btn-default large round" href="https://btcforks.slack.com/" target="_blank">
-                        <ion-icon name="logo-slack"></ion-icon> Slack
                     </a>
                     <a class="btn btn-default large round" href="https://www.facebook.com/bitcoincashorg/" target="_blank">
                         <ion-icon name="logo-facebook"></ion-icon> Facebook
